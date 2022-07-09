@@ -1,0 +1,74 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.footer {
+  padding: 32px 80px 0;
+
+  &__header {
+    @include m.flex($ai: center);
+
+    height: 112px;
+
+    padding-inline: 32px;
+  }
+
+  &__social-networks {
+    margin-left: auto;
+  }
+
+  &__container {
+    @include m.flex(wrap);
+
+    margin-bottom: 66px;
+  }
+
+  &__content {
+    @include m.flex(column);
+
+    width: 399px;
+  }
+
+  &__description {
+    padding: 24px 32px;
+
+    @include m.text($c: f.color(smoke), $w: 500);
+  }
+
+  &__btn {
+    @include m.text(f.size(18px), $c: f.color(black), $lh: f.lh(32px), $w: 600, $ls: -0.02rem);
+    box-shadow: 0 0 0 1pt f.color(black);
+    height: 48px;
+
+    &-group {
+      @include m.flex(center);
+      @include m.box(309px, 96px);
+
+      margin-top: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__list {
+    margin-left: auto;
+
+    @include m.relative(40px, left);
+  }
+
+  &__footer {
+    @include m.flex($ai: center);
+
+    height: 64px;
+
+    padding-inline: 112px;
+  }
+
+  &__item {
+    @include m.text(f.size(12px), $c: f.color(smoke), $lh: f.lh(16px), $w: 500);
+  }
+
+  &__policy {
+    margin-left: auto;
+
+    @include m.relative(40px, left);
+  }
+}

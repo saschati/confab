@@ -1,0 +1,27 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.vendor {
+  padding: 64px 190px 32px;
+
+  &__brands {
+    @include m.flex(wrap, space-between, center);
+
+    min-height: 80px;
+
+    padding-inline: 25px;
+    margin-bottom: 8px;
+  }
+
+  &__content {
+    @include m.flex(center);
+
+    min-height: 96px;
+  }
+
+  &__description {
+    width: 268px;
+
+    @include m.text(14px, f.color(smoke), $w: 500, $ta: center);
+  }
+}

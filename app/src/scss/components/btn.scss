@@ -1,0 +1,127 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/helpers' as h;
+@use 'src/scss/core/config' as c;
+@use 'sass:list' as list;
+
+@mixin btn-color($name, $bg, $tc: white) {
+  &_#{$name} {
+    --btn-bg-color: #{f.color(#{$bg})};
+    --btn-color: #{f.color(#{$tc})};
+  }
+}
+
+.btn {
+  --btn-bg-color: #{f.color(black)};
+  --btn-color: #{f.color(white)};
+  --btn-padding: 8px 24px;
+  --btn-height: 40px;
+  --btn-anim-speed: 0.3s;
+  --btn-size: #{f.size(14px)};
+  --btn-lh: #{f.lh()};
+  --btn-ta: center;
+  --btn-w: 600;
+  --btn-ws: nowrap;
+  --btn-ls: 0;
+  --btn-bs: 1px;
+
+  background-color: f.v(btn-bg-color);
+  color: f.v(btn-color);
+
+  height: f.v(btn-height);
+  padding: f.v(btn-padding);
+
+  @include m.text(f.v(btn-size), $lh: f.v(btn-lh), $ta: f.v(btn-ta), $w: f.v(btn-w), $ls: f.v(btn-ls));
+  @include m.font(paragraph);
+
+  white-space: f.v(btn-ws);
+
+  cursor: pointer;
+  transition: f.v(btn-anim-speed);
+
+  // ACTION
+  &:hover {
+    color: f.v(btn-bg-color);
+    background-color: f.v(btn-color);
+    box-shadow: 0 0 0 f.v(btn-bs) f.v(btn-bg-color);
+  }
+
+  // COLOR
+  &_color {
+    @each $name in c.colors(name) {
+      $text: 'white';
+      @if (h.to-string($name) == $text) {
+        $text: 'black';
+      }
+
+      @include btn-color($name, $name, $text);
+    }
+
+    &_transparent {
+      --btn-bg-color: transparent;
+      --btn-color: f.color(black);
+
+      &:hover {
+        color: f.color(white);
+        background-color: f.color(black);
+      }
+    }
+  }
+
+  // TYPE
+  &_type {
+    &_round {
+      border-radius: 99px;
+    }
+
+    &_border {
+      box-shadow: 0 0 0 f.v(btn-bs) f.color(black);
+    }
+
+    &_icon {
+      position: relative;
+
+      &-before {
+        --btn-padding: 8px 24px 8px 40px;
+      }
+
+      &-after {
+        --btn-padding: 8px 40px 8px 24px;
+      }
+
+      &-center {
+        @include m.square(32px, 50%);
+        @include m.flex(center);
+
+        --btn-padding: 0;
+      }
+    }
+  }
+
+  &_size {
+    &_x2 {
+      --btn-size: #{f.size(18px)};
+      --btn-lh: #{f.lh(32px)};
+      --btn-w: 600;
+      --btn-ls: -0.02rem;
+      --btn-height: 48px;
+    }
+  }
+
+  // ELEM
+  &__icon {
+    &-before, &-after {
+      position: absolute;
+
+      font-weight: 400;
+    }
+
+    &-before {
+      left: 17px;
+    }
+
+    &-after {
+      right: 17px;
+    }
+  }
+}

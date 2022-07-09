@@ -1,0 +1,11 @@
+.cursor {
+  &_type {
+    &_pointing * {
+      cursor: url('/img/icons/pointing.svg'), auto;
+
+      &:hover {
+        cursor: url('/img/icons/pointing.svg'), auto;
+      }
+    }
+  }
+}

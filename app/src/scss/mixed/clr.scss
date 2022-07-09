@@ -1,0 +1,21 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/config' as c;
+@use 'sass:list' as list;
+
+@mixin clr-color($name) {
+  &_#{$name} {
+    --clr-color: #{f.color(#{$name})};
+  }
+}
+
+.clr {
+  --clr-color: #{f.color(black)};
+  color: f.v(clr-color);
+
+  // COLOR
+  &_color {
+    @each $name in c.colors(name) {
+      @include clr-color($name);
+    }
+  }
+}

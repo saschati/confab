@@ -1,0 +1,93 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/title' as t;
+
+.subscribe {
+  padding: 80px;
+
+  &__header {
+    @include m.flex();
+
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    --big-title-w: 646px;
+    --big-title-h: 212px;
+  }
+
+  &__content {
+    @include m.flex($ai: center);
+
+    width: 510px;
+
+    padding: 24px 32px;
+    margin-left: auto;
+    margin-top: auto;
+  }
+
+  &__icon {
+    @include m.text(22px, $c: f.color(stormy));
+
+    margin-right: 24px;
+  }
+
+  &__description {
+    align-self: stretch;
+
+    @include m.text($w: 500, $c: f.color(stormy));
+  }
+
+  &__form {
+    @include m.flex(wrap);
+
+    padding: 32px;
+    width: 620px;
+  }
+
+  &__input {
+    @include m.box(100%, 80px, 99px);
+    padding: 24px 32px;
+
+    border: 1px solid f.color(smoke);
+    @include m.text(f.size(18px), $c: f.color(smoke), $lh: f.lh(32px), $w: 500);
+
+    &-group {
+      flex: 1 100%;
+
+      margin-bottom: 24px;
+    }
+  }
+
+  &__checkbox {
+    margin-right: 16px;
+
+    &-group {
+      @include m.flex($ai: center);
+      @include m.box(269px, 64px);
+      padding: 16px 32px;
+    }
+  }
+
+  &__label {
+    @include m.text(f.size(12px), f.color(smoke), f.lh(16px), $w: 500)
+  }
+
+  &__link {
+    box-shadow: 0 1px 0 0 f.color(smoke);
+  }
+
+  &__btn {
+    margin-left: auto;
+
+    --btn-size: #{f.size(18px)};
+    --btn-ls: -0.02rem;
+    --btn-lh: 32px;
+    --btn-padding: 16px 67px 16px 32px;
+    --btn-height: 64px;
+
+    &-icon {
+      right: 34px;
+    }
+  }
+}

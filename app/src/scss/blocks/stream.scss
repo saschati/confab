@@ -1,0 +1,15 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.stream {
+  @include m.flex();
+
+  padding: 24px;
+
+  background-color: f.color(cloudy);
+  border-radius:  32px;
+
+  &__tv {
+    margin-right: 16px;
+  }
+}

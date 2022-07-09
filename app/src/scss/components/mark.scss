@@ -1,0 +1,62 @@
+@use 'src/scss/core/config' as c;
+@use 'src/scss/core/helpers' as h;
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/screen' as screen;
+
+@mixin mark-color($name, $bg, $tc: white) {
+  &_#{$name} {
+    --mark-bg-color: #{f.color(#{$bg})};
+    --mark-color: #{f.color(#{$tc})};
+  }
+}
+
+.mark {
+  --mark-height: 40px;
+  --mark-padding: 4px 24px;
+  --mark-rudings: 99px;
+  --mark-bg-color: #{f.color(black)};
+  --mark-color: #{f.color(white)};
+  --mark-w: #{f.color(white)};
+  --mark-weight: 600;
+
+  display: inline-block;
+
+  height: f.v(mark-height);
+  padding: f.v(mark-padding);
+
+  border-radius: f.v(mark-rudings);
+  background-color: f.v(mark-bg-color);
+  color: f.v(mark-color);
+
+  @include m.text($w: f.v(mark-weight), $tt: uppercase);
+
+  // COLOR
+  &_color {
+    @each $name in c.colors(name) {
+      $text: 'white';
+      @if (h.to-string($name) == $text) {
+        $text: 'black';
+      }
+
+      @include mark-color($name, $name, $text);
+    }
+  }
+
+  &_type {
+    &_icon {
+      position: relative;
+      padding-left: 40px;
+    }
+  }
+
+  &__icon {
+    &-before {
+      position: absolute;
+      @include m.square(16px);
+      left: 20px;
+
+      font-weight: 400;
+    }
+  }
+}

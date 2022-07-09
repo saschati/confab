@@ -1,0 +1,20 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+
+.social-networks {
+  @include m.flex($ai: center);
+
+  &__item {
+    @include m.flex(center);
+    @include m.square(32px);
+
+    border-radius: 8px;
+    @include m.text(16px, $c: f.color(black));
+
+    @include m.relative(16px, left);
+
+    &:hover {
+      background-color: f.color(cloudy);
+    }
+  }
+}

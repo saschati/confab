@@ -1,0 +1,27 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.message {
+  @include m.flex();
+
+  padding: 16px;
+
+  border-radius: 16px;
+
+  &__avatar {
+    @include m.square(32pxm 99px, 50%);
+
+    margin-right: 16px;
+    margin-bottom: auto;
+
+    background-color: f.color(ouster);
+  }
+
+  &__title {
+    @include m.text(f.size(12px), f.color(timber), f.lh(16px), $w: 600);
+  }
+
+  &__message {
+    @include m.text(f.size(12px), f.color(black), f.lh(16px), $w: 500);
+  }
+}

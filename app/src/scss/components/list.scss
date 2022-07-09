@@ -1,0 +1,23 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+
+.list {
+  display: block;
+
+  padding: 24px 32px;
+
+  &__header {
+    margin-bottom: 32px;
+
+    @include m.text(f.size(18px), f.color(smoke), f.lh(32px), $w: 600, $ls: -0.02rem);
+  }
+
+  &__item {
+    display: block;
+
+    @include m.text($w: 500);
+    --link-color: #{f.color(black)};
+
+    @include m.relative(24px, top);
+  }
+}

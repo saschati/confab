@@ -1,0 +1,22 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/title' as t;
+
+.big-title {
+  @include m.box(
+    f.v(big-title-w, 515px),
+    f.v(big-title-h, 212px)
+  );
+  padding: 16px 32px;
+
+  @include t.title(96px);
+  color: f.color(black);
+
+  &__first {
+    margin-bottom: 8px;
+  }
+
+  &__second {
+    color: f.color(opal);
+  }
+}

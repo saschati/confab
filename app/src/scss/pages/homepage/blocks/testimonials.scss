@@ -1,0 +1,19 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.testimonials {
+  padding-block: 124px 148px;
+
+  &__tape {
+    @include m.flex();
+    @include m.relative(40px, top);
+  }
+
+  &__item {
+    width: 400px;
+
+    flex-shrink: 0;
+
+    @include m.relative(40px, left);
+  }
+}

@@ -1,0 +1,45 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/title' as t;
+
+.main {
+  padding: 80px 80px 96px;
+
+  &__header {
+    @include m.flex();
+
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    --big-title-w: 515px;
+    --big-title-h: 212px;
+  }
+
+  &__text {
+    margin-left: auto;
+    margin-top: auto;
+
+    padding: 24px 32px;
+    width: 400px;
+
+    @include m.text($w: 500, $c: f.color(smoke));
+  }
+
+  &__features {
+    @include m.flex($jc: space-between);
+  }
+
+  &__item {
+    width: 400px;
+
+    border-radius: 32px;
+    padding-bottom: 48px;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: f.color(white);
+    }
+  }
+}

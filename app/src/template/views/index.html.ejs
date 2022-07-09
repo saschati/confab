@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= _.template(require('./../inc/head.html').default)() %>
+</head>
+<body class="grid homepage">
+    <%= _.template(require('./../inc/header.html').default)() %>
+
+    <div class="grid__area beginning" style="--grid-area: beginning">
+        <h1 class="beginning__title big-title">
+            <span class="big-title__first">
+                virtual
+            </span>
+            <span class="big-title__second">
+                conferences
+            </span>
+        </h1>
+        <p class="beginning__text">
+            Virtual meetings, and conferences,<br>
+            anyone can share, join or host (virtual events).
+        </p>
+        <div class="beginning__actions">
+            <div class="beginning__mark">new!!!</div>
+            <div class="card bg bg_color_white beginning__card">
+                <h3 class="card__title">make a unique illustration design character</h3>
+                <div class="card__date">thu, 19 may 2022</div>
+                <div class="card__wrap">
+                    <div class="card__author">
+                        <img class="card__avatar" src="<%= require('../../img/avatar/avatar.png') %>" alt="Pablo stanley">
+                        <h5  class="card__fullname">Pablo stanley</h5>
+                        <p class="card__profession">Art Director & Illustrator</p>
+                    </div>
+                    <a href="#" class="card__arrow link link_type_round">
+                        <i class="icon icon_arrow_right_alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="beginning__btn-groups">
+                <button class="beginning__btn btn btn_color_white btn_type_round btn_type_icon btn_type_icon-before">
+                    <i class="btn__icon-before icon icon_notifications"></i>
+                    Remind me
+                </button>
+                <button class="beginning__btn btn btn_color_white btn_type_round btn_type_icon btn_type_icon-before">
+                    <i class="btn__icon-before icon icon_groups"></i>
+                    <span class="beginning__btn-participants">32</span>/128 participants
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid__area bg bg_color_cloudy" style="--grid-area: vendor">
+        <div class="vendor homepage__container">
+            <div class="vendor__brands">
+                <img src="<%= require('../../img/brannds/forbes.png') %>" alt="Brand">
+                <img src="<%= require('../../img/brannds/fortune.png') %>" alt="Brand">
+                <img src="<%= require('../../img/brannds/tc.png') %>" alt="Brand">
+                <img src="<%= require('../../img/brannds/wsj.png') %>" alt="Brand">
+                <img src="<%= require('../../img/brannds/ft.png') %>" alt="Brand">
+                <img src="<%= require('../../img/brannds/cnbc.png') %>" alt="Brand">
+            </div>
+            <div class="vendor__content">
+                <p class="vendor__description">
+                    Used by over <a class="clr clr_color_crayola" href="#">50+ million</a> users worldwide
+                    and trusted by top-tier companies.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid__area live-chat" style="--grid-area: live_chat">
+        <div class="live-chat__stream stream">
+            <div class="stream__tv tv">
+                <span class="tv__label mark mark_type_icon mark_color_crayola">
+                    <i class="mark__icon-before icon icon_stream"></i>
+                    LIVE
+                </span>
+                <div class="tv__toolbar toolbar cursor cursor_type_pointing">
+                    <button class="toolbar__item">
+                        <i class="icon icon_volume_up"></i>
+                    </button>
+                    <button class="toolbar__item">
+                        <i class="icon icon_volume_off"></i>
+                    </button>
+                    <button class="toolbar__item">
+                        <i class="icon icon_pause"></i>
+                    </button>
+                    <button class="toolbar__item">
+                        <i class="icon icon_subtitles"></i>
+                    </button>
+                    <button class="toolbar__item">
+                        <i class="icon icon_fullscreen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="chat cursor cursor_type_pointing">
+                <div class="chat__header">
+                    <span class="btn btn_type_icon btn_type_icon-before btn_color_black btn_type_round">
+                        <i class="btn__icon-before icon icon_whatshot"></i>
+                        Live Chat
+                    </span>
+                    <span class="chat__attendees btn btn_type_icon btn_type_icon-before btn_color_white btn_type_round">
+                        <i class="btn__icon-before icon icon_groups"></i>
+                        Attendees (128)
+                    </span>
+                    <button class="btn btn_color_black btn_type_icon btn_type_icon-center btn_type_round">
+                        <i class="icon icon_settings"></i>
+                    </button>
+                </div>
+                <div class="chat__container">
+                    <div class="chat__overlay"></div>
+                    <div class="chat__messages scrollbar">
+                        <div class="message chat__message">
+                            <img class="message__avatar" src="<%= require('../../img/avatar/message/avatar-1.png') %>" alt="Avatar">
+                            <div>
+                                <p class="message__title">Layla</p>
+                                <p class="message__message">Fun talk and inspiring💡love what you guys discuss!</p>
+                            </div>
+                        </div>
+                        <div class="message chat__message">
+                            <img class="message__avatar" src="<%= require('../../img/avatar/message/avatar-2.png') %>" alt="Avatar">
+                            <div>
+                                <p class="message__title">Steven</p>
+                                <p class="message__message">Great topic and speakers! the fact that this event is free is mind-blowing 💥</p>
+                            </div>
+                        </div>
+                        <div class="message chat__message">
+                            <img class="message__avatar" src="<%= require('../../img/avatar/message/avatar-3.png') %>" alt="Avatar">
+                            <div>
+                                <p class="message__title">Mark</p>
+                                <p class="message__message">Today's topic and speakers are 🔥🔥🔥</p>
+                            </div>
+                        </div>
+                        <div class="message chat__message">
+                            <img class="message__avatar" src="<%= require('../../img/avatar/message/avatar-4.png') %>" alt="Avatar">
+                            <div>
+                                <p class="message__title">Marci</p>
+                                <p class="message__message">The speaker mentions Flowbase as the biggest Webflow components site 👀 and I’ve used it for the past few months and it’s been amazing ❤🖤</p>
+                            </div>
+                        </div>
+                        <div class="message chat__message">
+                            <img class="message__avatar" src="<%= require('../../img/avatar/message/avatar-5.png') %>" alt="Avatar">
+                            <div>
+                                <p class="message__title">Wayne</p>
+                                <p class="message__message">This new event site, confab makes it easy for anyone to quickly build a branded event website 🎉 create a new event, or just have a quick meeting with client pitches has never being easy than this❗</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-form chat__form">
+                    <button class="chat-form__icon">
+                        <i class="icon icon_emoji_emotions"></i>
+                    </button>
+                    <label>
+                        <input class="chat-form__input" type="text" placeholder="Say something...">
+                    </label>
+                    <button class="chat-form__btn btn btn_color_black btn_type_round">
+                        <i class="icon icon_send"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="live-chat__wrap">
+            <div class="live-chat__item features">
+                <img class="features__icon" src="<%= require('../../img/pen-icon-eye.png') %>" alt="Icon">
+                <h3 class="features__title">watch exclusive</h3>
+                <p class="features__description">
+                    Free and <a class="clr clr_color_crayola" href="#">exclusive event</a> conferences with special guest and speakers.
+                </p>
+            </div>
+            <div class="live-chat__item features">
+                <img class="features__icon" src="<%= require('../../img/pen-icon-smiley-love.png') %>" alt="Icon">
+                <h3 class="features__title">top speakers</h3>
+                <p class="features__description">
+                    Anyone can <a class="clr clr_color_crayola" href="#">become a host</a> and customize the number of participants.
+                </p>
+            </div>
+            <div class="live-chat__item live-chat__get-start">
+                <p class="live-chat__description">
+                    Virtual meetings, and conferences,
+                    anyone can share, join or host (virtual events).
+                </p>
+                <button class="live-chat__btn btn btn_color_black btn_type_round">Get Started</button>
+                <button class="live-chat__btn live-chat__btn-browser btn btn_color_transparent btn_type_border btn_type_round btn_type_icon btn_type_icon-before">
+                    <i class="btn__icon-before icon icon_explore"></i>
+                    Browse
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid__area testimonials state--no-scroll-x bg bg_color_cloudy" style="--grid-area: testimonials">
+        <div class="testimonials__tape js-tape-right">
+            <div class="testimonials__item">
+                <div class="testimonials-item">
+                    <h3 class="testimonials-item__title">it's free!</h3>
+                    <p class="testimonials-item__description">[Testimonial goes in here] virtual meetings.</p>
+                    <div class="testimonials-item__author">
+                        <img class="testimonials-item__avatar" src="<%= require('../../img/avatar/tape/avatar-8.png') %>" alt="Avatar">
+                        <div>
+                            <h5 class="testimonials-item__username">george</h5>
+                            <p class="testimonials-item__profession">Art Director, Germany.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__item">
+                <div class="testimonials-item">
+                    <h3 class="testimonials-item__title">dream come true</h3>
+                    <p class="testimonials-item__description">[Testimonial goes in here] multi-paragraph, and conferences, anyone can share, join or become a host (virtual events).</p>
+                    <div class="testimonials-item__author">
+                        <img class="testimonials-item__avatar" src="<%= require('../../img/avatar/tape/avatar-2.png') %>" alt="Avatar">
+                        <div>
+                            <h5 class="testimonials-item__username">kamala</h5>
+                            <p class="testimonials-item__profession">Product Designer, Indonesia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__item">
+                <div class="testimonials-item">
+                    <h3 class="testimonials-item__title">best event site!</h3>
+                    <p class="testimonials-item__description">[Testimonial goes in here] multi-paragraph, and conferences, anyone can share.</p>
+                    <div class="testimonials-item__author">
+                        <img class="testimonials-item__avatar" src="<%= require('../../img/avatar/tape/avatar-3.png') %>" alt="Avatar">
+                        <div>
+                            <h5 class="testimonials-item__username">elliot</h5>
+                            <p class="testimonials-item__profession">Software Engineer, Australia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__item">
+                <div class="testimonials-item">
+                    <h3 class="testimonials-item__title">site of the year</h3>
+                    <p class="testimonials-item__description">[Testimonial goes in here] single paragraph.</p>
+                    <div class="testimonials-item__author">
+                        <img class="testimonials-item__avatar" src="<%= require('../../img/avatar/tape/avatar-4.png') %>" alt="Avatar">
+                        <div>
+                            <h5 class="testimonials-item__username">watson</h5>
+                            <p class="testimonials-item__profession">Sr. Motion Graphic, USA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonials__tape js-tape-left">
+            <div class="testimonials__item">
+                <div class="testimonials-item">
+                    <h3 class="testimonials-item__title">excellent ideas</h3>
+                    <p class="testimonials-item__description">[Testimonial goes in here] single paragraph.</p>
+                    <div class="testimonials-item__author">
+                        <img class="testimonials-item__avatar" src="<%= require('../../img/avatar/tape/avatar-4.png') %>" alt="Avatar">
+                        <div>
+                            <h5 class="testimonials-item__username">angela</h5>
+                            <p class="testimonials-item__profession">Public Speakers, Singapore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__item">
+                <div class="testimonials-item">
+                    <h3 class="testimonials-item__title">best experiences</h3>
+                    <p class="testimonials-item__description">[Testimonial goes in here] multi-paragraph, and conferences, anyone can share.</p>
+                    <div class="testimonials-item__author">
+                        <img class="testimonials-item__avatar" src="<%= require('../../img/avatar/tape/avatar-6.png') %>" alt="Avatar">
+                        <div>
+                            <h5 class="testimonials-item__username">olive</h5>
+                            <p class="testimonials-item__profession">Creative Director, Scotland.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__item">
+                <div class="testimonials-item">
+                    <h3 class="testimonials-item__title">meeting made easy</h3>
+                    <p class="testimonials-item__description">[Testimonial goes in here] multi-paragraph, and conferences, anyone can share, join or become a host (virtual events).</p>
+                    <div class="testimonials-item__author">
+                        <img class="testimonials-item__avatar" src="<%= require('../../img/avatar/tape/avatar-7.png') %>" alt="Avatar">
+                        <div>
+                            <h5 class="testimonials-item__username">thomas</h5>
+                            <p class="testimonials-item__profession">3D Animator, Netherlands.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials__item">
+                <div class="testimonials-item">
+                    <h3 class="testimonials-item__title">fun fun fun!</h3>
+                    <p class="testimonials-item__description">[Testimonial goes in here] multi-paragraph, and conferences, anyone can share.</p>
+                    <div class="testimonials-item__author">
+                        <img class="testimonials-item__avatar" src="<%= require('../../img/avatar/tape/avatar-8.png') %>" alt="Avatar">
+                        <div>
+                            <h5 class="testimonials-item__username">Ali</h5>
+                            <p class="testimonials-item__profession">Interaction Design, UAE.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid__area state--no-scroll" style="--grid-area: upcoming">
+        <div class="upcoming homepage__container">
+            <div class="upcoming__header">
+                <h2 class="upcoming__title big-title">
+                    <span class="big-title__first">upcoming</span>
+                    <span class="big-title__second">events</span>
+                </h2>
+                <div class="upcoming__paginate">
+                    <button class="upcoming__paginate-btn upcoming__paginate-btn-view btn btn_color_white btn_type_border btn_type_round btn_type_icon btn_type_icon-before">
+                        <i class="btn__icon-before icon icon_remove_red_eye"></i>
+                        View all
+                    </button>
+                    <div class="upcoming__paginate-control">
+                        <button class="js-side-slider_prev upcoming__paginate-btn upcoming__paginate-btn-arrow btn btn_color_white btn_type_icon btn_type_icon-center">
+                            <i class="icon icon_chevron_left"></i>
+                        </button>
+                        <button class="js-side-slider_next upcoming__paginate-btn upcoming__paginate-btn-arrow btn btn_color_white btn_type_icon btn_type_icon-center">
+                            <i class="icon icon_chevron_right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="upcoming__content">
+                <p class="upcoming__description">Virtual meetings, and conferences, anyone can share, join or host (virtual events).</p>
+                <div class="upcoming__cards js-side-slider">
+                    <div class="upcoming__card card bg bg_color_cloudy">
+                        <h3 class="card__title">make a 3d motion graphic looks mesmerizing</h3>
+                        <div class="card__date">thu, 19 may 2022</div>
+                        <div class="card__wrap">
+                            <div class="card__author">
+                                <img class="card__avatar" src="<%= require('../../img/avatar/upcoming/avatar.png') %>" alt="Pablo stanley">
+                                <h5  class="card__fullname">jerry</h5>
+                                <p class="card__profession">3D Motion Graphics</p>
+                            </div>
+                            <a href="#" class="card__arrow link link_type_round">
+                                <i class="icon icon_arrow_right_alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="upcoming__card card bg bg_color_cloudy">
+                        <h3 class="card__title">art direction and design leadership </h3>
+                        <div class="card__date">fri, 20 may 2022</div>
+                        <div class="card__wrap">
+                            <div class="card__author">
+                                <img class="card__avatar" src="<%= require('../../img/avatar/upcoming/avatar-2.png') %>" alt="Pablo stanley">
+                                <h5  class="card__fullname">angela</h5>
+                                <p class="card__profession">Creative Director</p>
+                            </div>
+                            <a href="#" class="card__arrow link link_type_round">
+                                <i class="icon icon_arrow_right_alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="upcoming__card card bg bg_color_cloudy">
+                        <h3 class="card__title">Motion Design to create delightful experiences</h3>
+                        <div class="card__date">sat, 21 may 2022</div>
+                        <div class="card__wrap">
+                            <div class="card__author">
+                                <img class="card__avatar" src="<%= require('../../img/avatar/upcoming/avatar.png') %>" alt="Pablo stanley">
+                                <h5  class="card__fullname">alderson</h5>
+                                <p class="card__profession">Interaction Design</p>
+                            </div>
+                            <a href="#" class="card__arrow link link_type_round">
+                                <i class="icon icon_arrow_right_alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="upcoming__card card bg bg_color_cloudy">
+                        <h3 class="card__title">make a 3d motion graphic looks mesmerizing</h3>
+                        <div class="card__date">thu, 19 may 2022</div>
+                        <div class="card__wrap">
+                            <div class="card__author">
+                                <img class="card__avatar" src="<%= require('../../img/avatar/upcoming/avatar.png') %>" alt="Pablo stanley">
+                                <h5  class="card__fullname">jerry</h5>
+                                <p class="card__profession">3D Motion Graphics</p>
+                            </div>
+                            <a href="#" class="card__arrow link link_type_round">
+                                <i class="icon icon_arrow_right_alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="upcoming__card card bg bg_color_cloudy">
+                        <h3 class="card__title">art direction and design leadership </h3>
+                        <div class="card__date">fri, 20 may 2022</div>
+                        <div class="card__wrap">
+                            <div class="card__author">
+                                <img class="card__avatar" src="<%= require('../../img/avatar/upcoming/avatar-2.png') %>" alt="Pablo stanley">
+                                <h5  class="card__fullname">angela</h5>
+                                <p class="card__profession">Creative Director</p>
+                            </div>
+                            <a href="#" class="card__arrow link link_type_round">
+                                <i class="icon icon_arrow_right_alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="upcoming__card card bg bg_color_cloudy">
+                        <h3 class="card__title">Motion Design to create delightful experiences</h3>
+                        <div class="card__date">sat, 21 may 2022</div>
+                        <div class="card__wrap">
+                            <div class="card__author">
+                                <img class="card__avatar" src="<%= require('../../img/avatar/upcoming/avatar.png') %>" alt="Pablo stanley">
+                                <h5  class="card__fullname">alderson</h5>
+                                <p class="card__profession">Interaction Design</p>
+                            </div>
+                            <a href="#" class="card__arrow link link_type_round">
+                                <i class="icon icon_arrow_right_alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid__area bg bg_color_cloudy" style="--grid-area: main">
+        <div class="main homepage__container">
+            <div class="main__header">
+                <h2 class="main__title big-title">
+                <span class="big-title__first">
+                    main
+                </span>
+                    <span class="big-title__second">
+                    features
+                </span>
+                </h2>
+                <p class="main__text">Virtual meetings, and conferences,
+                    anyone can share, join or host (virtual events).</p>
+            </div>
+            <div class="main__features">
+                <div class="main__item features">
+                    <img class="features__person" src="<%= require('../../img/person/person-1.png') %>" alt="Icon">
+                    <h3 class="features__title">Become a host</h3>
+                    <p class="features__description">
+                        Anyone can become a host and customize the number of participants.
+                    </p>
+                </div>
+                <div class="main__item features">
+                    <img class="features__person" src="<%= require('../../img/person/person-2.png') %>" alt="Icon">
+                    <h3 class="features__title">plan ahead</h3>
+                    <p class="features__description">
+                        Click New Event to schedule meetings or conferences and send invites.
+                    </p>
+                </div>
+                <div class="main__item features">
+                    <img class="features__person" src="<%= require('../../img/person/person-3.png') %>" alt="Icon">
+                    <h3 class="features__title">get a link, share.</h3>
+                    <p class="features__description">
+                        Click New Event to get a link you can send
+                        to people you want to invite.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid__area become" style="--grid-area: become">
+        <div class="become__wrapper">
+            <div class="become__container become__content">
+                <h4 class="become__title">
+                    Become an <br>
+                    event <span class="clr clr_color_opal">speakers</span>
+                </h4>
+                <p class="become__description">[description goes in here] blorem blipsum dolor sit bamat minim mollit non deserunt ullamco lorem ipsum bolor sit amat est.</p>
+                <button class="become__btn btn btn_color_white btn_type_border btn_type_round btn_type_icon btn_type_icon-before">
+                    <i class="btn__icon-before icon icon_arrow_circle_right"></i>
+                    Get Started
+                </button>
+            </div>
+            <div class="become__container">
+                <img src="<%= require('../../img/become.png') %>" alt="Become">
+            </div>
+        </div>
+        <div class="become__wrapper">
+            <div class="become__container">
+                <img src="<%= require('../../img/become-2.png') %>" alt="Become">
+            </div>
+            <div class="become__container become__content">
+                <h4 class="become__title">
+                    plan ahead<br>
+                    with <span class="clr clr_color_mango">scheduling</span>
+                </h4>
+                <p class="become__description">
+                    [description goes in here] blorem blipsum dolor sit bamat minim mollit non deserunt ullamco lorem ipsum bolor sit amat est.
+                </p>
+                <button class="become__btn btn btn_color_black btn_type_round btn_type_icon btn_type_icon-before">
+                    <i class="btn__icon-before icon icon_arrow_circle_right"></i>
+                    Get Started
+                </button>
+            </div>
+        </div>
+        <div class="become__wrapper">
+            <div class="become__container become__content">
+                <h4 class="become__title">
+                    level up<br>
+                    your <span class="clr clr_color_crayola">engagement</span>
+                </h4>
+                <p class="become__description">
+                    [description goes in here] blorem blipsum dolor sit bamat minim mollit non deserunt ullamco lorem ipsum bolor sit amat est.
+                </p>
+                <button class="become__btn btn btn_type_border btn_color_white btn_type_round btn_type_icon btn_type_icon-before">
+                    <i class="btn__icon-before icon icon_arrow_circle_right"></i>
+                    Get Started
+                </button>
+            </div>
+            <div class="become__container">
+                <img src="<%= require('../../img/become-3.png') %>" alt="Become">
+            </div>
+        </div>
+    </div>
+
+    <div class="grid__area bg bg_color_cloudy" style="--grid-area: subscribe">
+        <div class="subscribe homepage__container">
+            <div class="subscribe__header">
+                <h4 class="subscribe__title big-title">
+                <span class="big-title__first">
+                    subscribe
+                </span>
+                    <br>
+                    <span class="big-title__second">
+                    our newsletter
+                </span>
+                </h4>
+                <div class="subscribe__content">
+                    <i class="subscribe__icon icon icon_campaign"></i>
+                    <p class="subscribe__description">
+                        Get the latest <a class="clr clr_color_crayola" href="#">free</a> event conference notification and a reminder of upcoming speakers.
+                    </p>
+                </div>
+            </div>
+            <div class="subscribe__form">
+                <label class="subscribe__input-group">
+                    <input class="subscribe__input" placeholder="Your email address" type="text">
+                </label>
+                <label class="subscribe__checkbox-group">
+                    <input class="checkbox subscribe__checkbox" type="checkbox">
+                    <span class="subscribe__label">
+                    I agree with <a class="subscribe__link" href="#">Privacy Policy</a> and
+                    <a class="subscribe__link" href="#">Terms of Conditions</a>
+                </span>
+                </label>
+                <button class="subscribe__btn btn btn_color_black btn_type_round btn_type_icon btn_type_icon-after">
+                    Subscribe
+                    <i class="subscribe__btn-icon btn__icon-after icon icon_send"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid__area cta" style="--grid-area: cta">
+        <div class="cta__header">
+            <h3 class="cta__title big-title">
+                <p class="big-title__first">host</p>
+                <p class="big-title__second">for free</p>
+            </h3>
+            <div class="cta__content">
+                <button class="cta__btn btn btn_color_white btn_type_border btn_size_x2 btn_type_round btn_type_icon btn_type_icon-before">
+                    <i class="btn__icon-before icon icon_add"></i>
+                    New event
+                </button>
+                <p class="cta__description">
+                    Virtual meetings, and conferences,
+                    anyone can share, join or host (virtual events).
+                </p>
+            </div>
+        </div>
+        <div class="cta__illustration">
+            <img src="<%= require('../../img/cta_illustration.png') %>" alt="Cta">
+        </div>
+    </div>
+
+    <%= _.template(require('./../inc/footer.html').default)() %>
+</body>
+</html>

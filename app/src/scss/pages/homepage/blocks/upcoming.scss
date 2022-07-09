@@ -1,0 +1,83 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/title' as t;
+
+.upcoming {
+  padding: 80px;
+
+  &__header {
+    @include m.flex();
+
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    --big-title-w: 387px;
+    --big-title-h: 212px;
+  }
+
+  &__paginate {
+    @include m.flex($ai: center);
+    @include m.box(362px, 112px);
+
+    padding: 24px 32px;
+
+    margin-left: auto;
+    margin-top: auto;
+
+    &-control {
+      margin-left: 24px;
+
+      @include m.flex($ai: center);
+    }
+
+    &-btn {
+      &-view {
+        --btn-size: #{f.size(16px)};
+        --btn-bs: 2px;
+      }
+
+      &-arrow {
+        @include m.square(64px, 50%);
+
+        @include m.text(f.size(32px), $w: 400);
+      }
+
+      @include m.relative(24px, left);
+    }
+  }
+
+  &__content {
+    @include m.flex();
+  }
+
+  &__description {
+    flex-shrink: 0;
+
+    width: 290px;
+
+    padding: 24px 32px;
+    margin-top: auto;
+
+    @include m.text(f.size(14px), $c: f.color(smoke), $w: 500);
+  }
+
+  &__cards {
+    @include m.flex();
+
+    margin-left: 150px;
+    overflow: visible;
+  }
+
+  &__card {
+    flex-shrink: 0;
+
+    height: 480px;
+
+    @include m.relative(40px, left);
+
+    &:hover {
+      box-shadow: 0 0 0 4px f.color(black);
+    }
+  }
+}

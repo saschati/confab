@@ -1,0 +1,28 @@
+@use 'src/scss/core/page' as page;
+@use 'src/scss/core/screen' as screen;
+
+.homepage {
+  @include page.style;
+
+  display: grid;
+  grid-template:
+        '.            header                  .' 108px
+        '.            beginning               .' auto
+        'vendor       vendor             vendor' auto
+        '.            live_chat               .' auto
+        'testimonials testimonials testimonials' auto
+        'upcoming     upcoming         upcoming' auto
+        'main         main                 main' auto
+        '.            become                  .' auto
+        'subscribe    subscribe       subscribe' auto
+        '.            cta                     .' auto
+        'footer       footer             footer' 531px
+    /    auto         minmax(auto, 1440px) auto
+  ;
+
+  &__container {
+    width: 1440px;
+
+    margin: auto;
+  }
+}

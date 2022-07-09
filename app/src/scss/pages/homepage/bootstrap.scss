@@ -1,0 +1,40 @@
+@use "src/scss/common/bootstrap";
+
+// COMPONENTS
+@use "src/scss/components/icons";
+@use "src/scss/components/link";
+@use "src/scss/components/social-networks";
+@use "src/scss/components/btn";
+@use "src/scss/components/mark";
+@use "src/scss/components/scrollbar";
+@use "src/scss/components/list";
+@use "src/scss/components/card";
+@use "src/scss/components/features";
+@use "src/scss/components/big-title";
+@use "src/scss/components/stream/bootstrap" as _stream;
+@use "src/scss/components/testimonials-item";
+@use "src/scss/components/form/checkbox";
+
+// MIXED
+@use "src/scss/mixed/grid";
+@use "src/scss/mixed/bg";
+@use "src/scss/mixed/clr";
+@use "src/scss/mixed/state";
+@use "src/scss/mixed/cursor";
+
+// BLOCKS
+@use "src/scss/blocks/footer";
+@use "src/scss/blocks/header";
+@use "src/scss/blocks/stream";
+
+// THIS
+@use "./blocks/beginning";
+@use "./blocks/vendor";
+@use "./blocks/live-chat";
+@use "./blocks/testimonials";
+@use "./blocks/upcoming";
+@use "./blocks/main" as _main;
+@use "./blocks/become";
+@use "./blocks/subscribe";
+@use "./blocks/cta";
+@use "main";

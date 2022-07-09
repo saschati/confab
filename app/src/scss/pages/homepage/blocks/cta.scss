@@ -1,0 +1,40 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.cta {
+  padding-top: 80px;
+
+  &__header {
+    @include m.flex();
+
+    margin: 0 82px 48px 80px;
+  }
+
+  &__title {
+    --big-title-w: 385px;
+    --bit-title-h: 212px;
+  }
+
+  &__content {
+    margin-top: auto;
+    margin-left: auto;
+
+    width: 399px;
+
+    padding: 24px 32px;
+  }
+
+  &__btn {
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    @include m.text($w: 500, $c: f.color(smoke));
+  }
+
+  &__illustration {
+    @include m.box(100%, 665px);
+
+    margin-left: 20px;
+  }
+}

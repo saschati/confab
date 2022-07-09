@@ -1,0 +1,61 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.chat {
+  @include m.box(396px, 592px, 32px);
+
+  background-color: f.color(white);
+
+  &__header {
+    @include m.flex($jc: space-between, $ai: center);
+
+    padding: 24px 24px 0;
+
+    margin-bottom: 16px;
+  }
+
+  &__attendees {
+    color: f.color(smoke);
+  }
+
+  &__container {
+    position: relative;
+
+    height: 432px;
+    margin: 0 8px 8px;
+  }
+
+  &__overlay {
+    position: absolute;
+    pointer-events: none;
+
+    @include m.box(380px, 432px);
+
+    background: linear-gradient(
+      180deg,
+      f.color(white) 0%,
+      rgba(255, 255, 255, 0) 18.53%,
+      rgba(255, 255, 255, 0) 81.47%,
+      f.color(white) 100%
+    );
+  }
+
+  &__messages {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    @include m.box(100%, 100%);
+  }
+
+  &__message {
+    @include m.relative(8px, top);
+
+    &:hover {
+      background-color: f.color(cloudy)
+    }
+  }
+
+  &__form {
+    margin: 0 24px 24px;
+  }
+}

@@ -1,0 +1,118 @@
+@font-face {
+    font-family: icons;
+    src: url("/app/src/fonts/icons/icons.eot");src: url("/app/src/fonts/icons/icons.eot?f48b4579#iefix") format("embedded-opentype"),
+             url("/app/src/fonts/icons/icons.woff2?f48b4579") format("woff2"),
+             url("/app/src/fonts/icons/icons.woff?f48b4579") format("woff"),
+             url("/app/src/fonts/icons/icons.ttf?f48b4579") format("truetype"),
+             url("/app/src/fonts/icons/icons.svg?f48b4579#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+  font-family: 'icons';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+
+ 
+  &_add::before {
+    content: "\ea01";
+  } 
+  &_arrow_circle_right::before {
+    content: "\ea02";
+  } 
+  &_arrow_right_alt::before {
+    content: "\ea03";
+  } 
+  &_campaign::before {
+    content: "\ea04";
+  } 
+  &_chevron_left::before {
+    content: "\ea05";
+  } 
+  &_chevron_right::before {
+    content: "\ea06";
+  } 
+  &_duo::before {
+    content: "\ea07";
+  } 
+  &_emoji_emotions::before {
+    content: "\ea08";
+  } 
+  &_emoji_objects::before {
+    content: "\ea09";
+  } 
+  &_expand_more::before {
+    content: "\ea0a";
+  } 
+  &_explore::before {
+    content: "\ea0b";
+  } 
+  &_favorite::before {
+    content: "\ea0c";
+  } 
+  &_fullscreen::before {
+    content: "\ea0d";
+  } 
+  &_groups::before {
+    content: "\ea0e";
+  } 
+  &_instagram::before {
+    content: "\ea0f";
+  } 
+  &_interests::before {
+    content: "\ea10";
+  } 
+  &_link::before {
+    content: "\ea11";
+  } 
+  &_linkedin::before {
+    content: "\ea12";
+  } 
+  &_medium::before {
+    content: "\ea13";
+  } 
+  &_notifications::before {
+    content: "\ea14";
+  } 
+  &_pause::before {
+    content: "\ea15";
+  } 
+  &_pointing::before {
+    content: "\ea16";
+  } 
+  &_remove_red_eye::before {
+    content: "\ea17";
+  } 
+  &_send::before {
+    content: "\ea18";
+  } 
+  &_settings::before {
+    content: "\ea19";
+  } 
+  &_stream::before {
+    content: "\ea1a";
+  } 
+  &_subtitles::before {
+    content: "\ea1b";
+  } 
+  &_today::before {
+    content: "\ea1c";
+  } 
+  &_twitter::before {
+    content: "\ea1d";
+  } 
+  &_verified::before {
+    content: "\ea1e";
+  } 
+  &_volume_off::before {
+    content: "\ea1f";
+  } 
+  &_volume_up::before {
+    content: "\ea20";
+  } 
+  &_whatshot::before {
+    content: "\ea21";
+  } 
+}

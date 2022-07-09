@@ -1,0 +1,41 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/title' as t;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/screen' as screen;
+
+.header {
+  @include m.flex(row, flex-end, flex-start);
+
+  padding-left: 112px;
+  padding-right: 80px;
+
+  &__logo {
+    margin-right: auto;
+
+    @include t.title(logo);
+    color: f.color(smoke);
+  }
+
+  &__link {
+    @include m.relative(56px, left);
+  }
+
+  &__logo,
+  &__link {
+    margin-top: 40px;
+  }
+
+  &__btn {
+    margin-top: 32px;
+
+    --btn-size: #{f.size()};
+  }
+
+  &__link + &__btn {
+    margin-left: 130px;
+  }
+
+  @include screen.mobile {
+    padding-right: 18px;
+  }
+}

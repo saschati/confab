@@ -1,0 +1,40 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/title' as t;
+
+.become {
+  padding: 80px;
+
+  &__wrapper {
+    @include m.flex(wrap, $jc: space-between);
+
+    @include m.relative(120px, top)
+  }
+
+  &__container {
+    @include m.box(620px, 368px);
+  }
+
+  &__content {
+    padding: 48px;
+  }
+
+  &__title {
+    width: 524px;
+
+    @include t.title(64px);
+    color: f.color(black);
+
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    @include m.text($w: 500);
+
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    --btn-size: #{f.size(16px)};
+  }
+}

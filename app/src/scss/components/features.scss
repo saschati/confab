@@ -1,0 +1,29 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/title' as t;
+
+.features {
+  padding: 24px;
+
+  &__icon {
+    @include m.square(80px);
+
+    margin-bottom: 16px;
+  }
+
+  &__person {
+    @include m.box(200px, 270px);
+
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    @include t.title(h3);
+
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    @include m.text(f.size(14px), f.color(stormy), $w: 500);
+  }
+}

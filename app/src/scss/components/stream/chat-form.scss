@@ -1,0 +1,34 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.chat-form {
+  position: relative;
+
+  height: 48px;
+
+  &__input {
+    padding: 16px 60px 16px 48px;
+    width: 100%;
+
+    @include m.text(f.size(12px), f.color(smoke), f.lh(16px), $w: 500);
+    background-color: f.color(cloudy);
+    border-radius: 99px;
+  }
+
+  &__icon {
+    position: absolute;
+
+    @include m.square(16px);
+    @include m.coords($t: calc(24px - 12px), $l: 18px);
+  }
+
+  &__btn {
+    position: absolute;
+
+    @include m.coords($t: calc(24px - 16px), $r: 8px);
+
+    --btn-padding: 4px 16px;
+    --btn-height: 32px;
+    font-size: f.size(12px);
+  }
+}

@@ -1,0 +1,43 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.live-chat {
+  padding: 80px;
+
+  &__stream {
+    margin-bottom: 48px;
+  }
+
+  &__wrap {
+    @include m.flex(wrap, space-between);
+  }
+
+  &__item {
+    width: 400px;
+  }
+
+  &__get-start {
+    @include m.flex(wrap);
+
+    padding: 32px;
+
+    border-radius: 24px;
+    background-color: f.color(cloudy);
+  }
+
+  &__description {
+    flex: 1 100%;
+
+    color: f.color(stormy);
+  }
+
+  &__btn {
+    margin-top: auto;
+
+    @include m.relative(8px, left);
+  }
+
+  &__btn-browser {
+    margin-right: auto;
+  }
+}

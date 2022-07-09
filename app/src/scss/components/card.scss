@@ -1,0 +1,54 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/title' as t;
+
+.card {
+  @include m.flex(column);
+  @include m.box(360px, 436px, 32px);
+
+  padding: 32px;
+
+  &__title {
+    @include t.title(h3);
+    color: f.color(black);
+
+    margin-bottom: 18px;
+  }
+
+  &__date {
+    @include t.title(h5);
+
+    color: f.color(crayola);
+  }
+
+  &__wrap {
+    @include m.flex();
+
+    margin-top: auto;
+  }
+
+  &__author {
+  }
+
+  &__avatar {
+    @include m.square(46px, 16px);
+
+    margin-bottom: 16px;
+  }
+
+  &__fullname {
+    @include t.title(h5);
+
+    color: f.color(stormy);
+  }
+
+  &__profession {
+    @include m.text(f.size(14px), $c: f.color(smoke));
+  }
+
+  &__arrow {
+    margin: auto 0 5px auto;
+
+    @include m.text(f.size(32px));
+  }
+}

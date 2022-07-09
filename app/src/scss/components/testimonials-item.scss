@@ -1,0 +1,54 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/title' as t;
+
+.testimonials-item {
+  @include m.flex(column);
+
+  width: 400px;
+
+  padding: 32px;
+
+  border-radius: 32px;
+  background-color: f.color(white);
+
+  &__title {
+    margin-bottom: 16px;
+
+    @include t.title(h3);
+    color: f.color(black);
+
+    &:before, &:after {
+      content: '"';
+      color: f.color(crayola);
+    }
+  }
+
+  &__description {
+    @include m.text($w: 500);
+  }
+
+  &__author {
+    @include m.flex();
+
+    margin-top: 64px;
+  }
+
+  &__avatar {
+    @include m.square(48px, 16px);
+
+    margin-right: 16px;
+
+    background-color: f.color(cloudy);
+  }
+
+  &__username {
+    @include t.title(h5);
+
+    margin-top: 6px;
+  }
+
+  &__profession {
+    @include m.text(f.size(14px), $c: f.color(smoke), $w: 500);
+  }
+}

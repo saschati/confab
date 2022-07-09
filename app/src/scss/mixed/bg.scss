@@ -1,0 +1,21 @@
+@use 'src/scss/core/functions' as f;
+@use 'src/scss/core/config' as c;
+@use 'sass:list' as list;
+
+@mixin bg-color($name) {
+  &_#{$name} {
+    --bg-color: #{f.color(#{$name})};
+  }
+}
+
+.bg {
+  --bg-color: #{f.color(white)};
+  background-color: f.v(bg-color);
+
+  // COLOR
+  &_color {
+    @each $name in c.colors(name) {
+      @include bg-color($name);
+    }
+  }
+}

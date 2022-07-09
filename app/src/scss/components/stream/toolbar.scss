@@ -1,0 +1,21 @@
+@use 'src/scss/core/mixin' as m;
+@use 'src/scss/core/functions' as f;
+
+.toolbar {
+  @include m.flex($jc: space-between);
+
+  height: 72px;
+  padding: 8px;
+
+  border-radius: 99px;
+  background-color: f.color(white);
+
+  &__item {
+    @include m.square(56px, 99px);
+    @include m.flex(center);
+
+    &:hover {
+      background-color: f.color(cloudy);
+    }
+  }
+}
