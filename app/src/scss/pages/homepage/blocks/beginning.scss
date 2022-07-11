@@ -68,8 +68,8 @@
 
     border-radius: 32px;
     @include m.background($color: f.color(seafoam));
-    background-image: url('/img/illustration.png'),
-      url('/img/noise_overlay.png');
+    background-image: url('/img/illustration.webp'),
+      url('/img/noise_overlay.webp');
   }
 
   &__card {

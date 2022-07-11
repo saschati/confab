@@ -11,9 +11,9 @@
   border: 8px solid f.color(black);
 
   @include m.background(f.color(seafoam));
-  background-image: url('/img/person_tv.png'),
-    url('/img/noise_tv.png'),
-    url('/img/dot-flake_tv.png');
+  background-image: url('/img/person_tv.webp'),
+    url('/img/noise_tv.webp'),
+    url('/img/dot-flake_tv.webp');
   background-position: center 74px,
     left top,
     left top;

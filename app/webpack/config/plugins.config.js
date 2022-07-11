@@ -36,9 +36,7 @@ module.exports = function (confPath, webpack) {
         }),
         new CaseSensitivePathsPlugin(),
         new DuplicatesPlugin(),
-        new CircularDependencyPlugin({
-            exclude: /lorem\-ipsum/,
-        }),
+        new CircularDependencyPlugin(),
         new webpack.ProvidePlugin({
             _: 'lodash',
         }),

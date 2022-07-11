@@ -1,5 +1,6 @@
 import { LoremIpsum } from "lorem-ipsum";
 import _ from 'lodash';
+import lozad from 'lozad'
 
 import avatar_1 from '../../img/avatar/message/avatar-1.png';
 import avatar_2 from '../../img/avatar/message/avatar-2.png';
@@ -29,6 +30,8 @@ const lorem = new LoremIpsum({
 let toUpper = s => s.replace(/./, c => c.toUpperCase());
 let timer = () => Math.ceil(Math.random() * 1000);
 
+const observer = lozad();
+
 export default function (wrapper) {
     let stopScroll = false;
 
@@ -37,7 +40,7 @@ export default function (wrapper) {
 
     const template = `
         <div class="message chat__message">
-            <img class="message__avatar" src="{avatar}" alt="Avatar">
+            <img class="message__avatar lozad" data-src="{avatar}" alt="Avatar">
             <div>
                 <p class="message__title">{username}</p>
                 <p class="message__message">{message}</p>
@@ -60,6 +63,10 @@ export default function (wrapper) {
         _template = _template.replace('{message}', lorem.generateSentences());
 
         wrapper.insertAdjacentHTML('beforeend', _template);
+
+        for (const img of wrapper.lastElementChild.querySelectorAll('img')) {
+            observer.triggerLoad(img);
+        }
 
         if (stopScroll) {
             wrapper.scrollTo({top: wrapper.scrollHeight, behavior: 'smooth'});
